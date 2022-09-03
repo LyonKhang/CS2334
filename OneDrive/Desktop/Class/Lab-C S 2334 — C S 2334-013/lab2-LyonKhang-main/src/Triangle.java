@@ -68,10 +68,15 @@ public class Triangle {
 		return true;
 	}
 	
-	public double lawOfCosines(double a, double b, double c) {
+	// input is subjective to different
+	public static double lawOfCosines(double a, double b, double c) {
 		
 	    return Math.acos((Math.pow(a, 2) + Math.pow(b, 2) - Math.pow(c, 2)) / (2 * a * b));
 	    }
+	
+	public String toString() {
+		return POLYGONSHAPE +"\"("+ sideA + " " +sideB + " " + sideC +")\"";
+	}
 	
 	//theEnd
 }
