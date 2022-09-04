@@ -45,7 +45,7 @@ public class Triangle {
 			
 		}
 		else {
-			if(isTriangle(sides)) {
+			if(!isTriangle(sides)) {
 				for (int i =0; i < sides.length;i++)
 						sides[i]=DEFAULT_SIDE;
 			}
@@ -119,7 +119,7 @@ public class Triangle {
 	}
 	
 	public double getAngleC() {
-		return lawOfCosines(sideA, sideB, sideC);
+		return lawOfCosines(sideB, sideA, sideC);
 	}
 	
 	public double[] getAngles() {
@@ -211,11 +211,12 @@ public class Triangle {
 		System.out.println(input.getSideA());
 		System.out.println(input.getSideB());
 		
-		double[] testTwo = new double[] {1,1,1};
+		double[] testTwo = new double[] {5,12,13};
 
 		Triangle cat = new Triangle(testTwo);
-		System.out.println(cat.getSideA());
-		System.out.println(cat.getSideB());
+		System.out.println(cat.getAngleA());
+		System.out.println(cat.getAngleB());
+		System.out.println(cat.getAngleC());
 		
 		double[] testThree = new double[] {4.5100,4.5100,4.5100};
 
